@@ -1,0 +1,17 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+name = Dustin Heeg
+email = dustinheeg@gmail.com
+
+[difftool]
+prompt = true
+
+[diff]
+tool = nvimdiff
+
+[difftool "nvimdiff"]
+cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+
+[init]
+	defaultBranch = main
