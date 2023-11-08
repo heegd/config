@@ -1,0 +1,86 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "palette": {
+        "nord0": "#2E3440",
+        "nord1": "#3B4252",
+        "nord2": "#434C5E",
+        "nord3": "#4C566A",
+        "nord4": "#D8DEE9",
+        "nord5": "#E5E9F0",
+        "nord6": "#ECEFF4",
+        "nord7": "#8FBCBB",
+        "nord8": "#88C0D0",
+        "nord9": "#81A1C1",
+        "nord10": "#5E81AC",
+        "nord11": "#BF616A",
+        "nord12": "#D08770",
+        "nord13": "#EBCB8B",
+        "nord14": "#A3BE8C",
+        "nord15": "#B48EAD"
+    },
+    "console_title_template": "{{ .Shell }} in {{ .Folder }}",
+    "blocks": [
+        {
+            "alignment": "left",
+            "type": "prompt",
+            "newline": true,
+            "segments": [
+                {
+                    "type": "session",
+                    "template": "\uf2be {{ .UserName }}@{{ .HostName }}  ",
+                    "style": "plain",
+                    "foreground": "p:nord8"
+                },
+                {
+                    "type": "path",
+                    "template": "\udb80\ude56 {{ .Path }}  ",
+                    "style": "plain",
+                    "foreground": "p:nord9",
+                    "properties": {
+                        "style": "full"
+                    }
+                },
+                {
+                    "type": "shell",
+                    "template": "\uf489 {{.Name}}  ",
+                    "style": "plain",
+                    "foreground": "p:nord10"
+                },
+                {
+                    "type": "git",
+                    "template": "{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uF044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uF046 {{ .Staging.String }}{{ end }}  ",
+                    "style": "plain",
+                    "foreground": "p:nord10",
+                    "properties": {
+                        "fetch_upstream_icon": true
+                    }
+                },
+                {
+                    "type": "python",
+                    "template": "\ue73c {{ .Venv }}  ",
+                    "style": "plain",
+                    "foreground": "p:nord10",
+                    "properties": {
+                        "home_enabled": true,
+                        "fetch_version": false
+                    }
+                }
+            ]
+        },
+        {
+            "alignment": "left",
+            "type": "prompt",
+            "newline": true,
+            "segments": [
+                {
+                    "type": "text",
+                    "template": "{{if .Env.Root}}<b>#</b>{{else}}<b>$</b>{{end}}",
+                    "style": "plain",
+                    "foreground": "p:nord6"
+                }
+            ]
+        }
+    ],
+    "final_space": true,
+    "version": 2
+}
