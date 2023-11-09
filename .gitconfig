@@ -1,17 +1,28 @@
-# This is Git's per-user configuration file.
 [user]
-# Please adapt and uncomment the following lines:
 name = Dustin Heeg
 email = dustinheeg@gmail.com
-
-[difftool]
-prompt = true
 
 [diff]
 tool = nvimdiff
 
+[difftool]
+prompt = true
+
 [difftool "nvimdiff"]
 cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 
+[merge]
+	tool = "nvim"
+
+[mergetool]
+	keepBackup = false
+	prompt = false
+
+[mergetool "nvim"]
+	cmd = "nvim -d -c \"wincmd l\" -c \"norm ]c\" \"$LOCAL\" \"$MERGED\" \"$REMOTE\""
+
 [init]
 	defaultBranch = main
+
+[pull]
+	rebase = false
