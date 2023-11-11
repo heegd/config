@@ -13,6 +13,7 @@ end
 config.color_scheme = 'nord'
 config.font = wezterm.font('JetBrainsMono Nerd Font', { weight = 'DemiBold' })
 config.font_size = 13
+config.line_height = 1.2
 
 config.keys = {
   {
