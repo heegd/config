@@ -27,8 +27,8 @@ return {
             ["af"] = { query = "@function.outer", desc = "Select outer part of a function region" },
             ["if"] = { query = "@function.inner", desc = "Select inner part of a function region" },
 
-            ["ac"] = { query = "@class.outer", desc = "Select outer part of a class region" },
-            ["ic"] = { query = "@class.inner", desc = "Select inner part of a class region" },
+            ["am"] = { query = "@class.outer", desc = "Select outer part of a class region" },
+            ["im"] = { query = "@class.inner", desc = "Select inner part of a class region" },
           },
           include_surrounding_whitespace = true,
         },
@@ -46,28 +46,28 @@ return {
           set_jumps = true, -- whether to set jumps in the jumplist
           goto_next_start = {
             ["]f"] = { query = "@function.outer", desc = "Next method/function def start" },
-            ["]c"] = { query = "@class.outer", desc = "Next class start" },
+            ["]m"] = { query = "@class.outer", desc = "Next class start" },
             ["]i"] = { query = "@conditional.outer", desc = "Next conditional start" },
             ["]l"] = { query = "@loop.outer", desc = "Next loop start" },
             ["]a"] = { query = "@parameter.outer", desc = "Next parameter start" },
           },
           goto_next_end = {
             ["]F"] = { query = "@function.outer", desc = "Next method/function def end" },
-            ["]C"] = { query = "@class.outer", desc = "Next class end" },
+            ["]M"] = { query = "@class.outer", desc = "Next class end" },
             ["]I"] = { query = "@conditional.outer", desc = "Next conditional end" },
             ["]L"] = { query = "@loop.outer", desc = "Next loop end" },
             ["]A"] = { query = "@parameter.outer", desc = "Next parameter end" },
           },
           goto_previous_start = {
             ["[f"] = { query = "@function.outer", desc = "Prev method/function def start" },
-            ["[c"] = { query = "@class.outer", desc = "Prev class start" },
+            ["[m"] = { query = "@class.outer", desc = "Prev class start" },
             ["[i"] = { query = "@conditional.outer", desc = "Prev conditional start" },
             ["[l"] = { query = "@loop.outer", desc = "Prev loop start" },
             ["[a"] = { query = "@parameter.outer", desc = "Prev parameter start" },
           },
           goto_previous_end = {
             ["[F"] = { query = "@function.outer", desc = "Prev method/function def end" },
-            ["[C"] = { query = "@class.outer", desc = "Prev class end" },
+            ["[M"] = { query = "@class.outer", desc = "Prev class end" },
             ["[I"] = { query = "@conditional.outer", desc = "Prev conditional end" },
             ["[L"] = { query = "@loop.outer", desc = "Prev loop end" },
             ["[A"] = { query = "@parameter.outer", desc = "Prev parameter end" },

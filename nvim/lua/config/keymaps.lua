@@ -19,7 +19,9 @@ keymap.set("n", "<leader>W", ":wa<cr>", { desc = "Write all" })
 keymap.set("n", "<leader>Co", ":copen<cr>", { noremap = true, silent = true, desc = "Qflist open" })
 keymap.set("n", "<leader>Cc", ":cclose<cr>", { noremap = true, silent = true, desc = "Qflist close" })
 keymap.set("n", "<leader>Cn", ":cnext<cr>", { noremap = true, silent = true, desc = "Qflist next" })
+keymap.set("n", "]q", ":cnext<cr>", { noremap = true, silent = true, desc = "Qflist next" })
 keymap.set("n", "<leader>Cp", ":cprevious<cr>", { noremap = true, silent = true, desc = "Qflist prev" })
+keymap.set("n", "[q", ":cprevious<cr>", { noremap = true, silent = true, desc = "Qflist prev" })
 
 -- Location List
 keymap.set("n", "<leader>co", ":lopen<cr>", { noremap = true, silent = true, desc = "Loclist open" })
