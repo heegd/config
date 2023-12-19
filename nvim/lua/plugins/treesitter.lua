@@ -33,7 +33,7 @@ return {
           "yaml"
         },
         sync_install = true,
-        auto_install = true,
+        auto_install = false,
         highlight = { enable = true },
         autopairs = { enable = true },
         indent = { enable = true },

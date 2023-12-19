@@ -53,7 +53,14 @@ return {
         }
       }
 
+      -- Need to add cmd to the call for windows
+      local python_lsp_call = "pyright-langserver"
+      if (vim.fn.has("win32") == 1)
+      then
+        python_lsp_call = python_lsp_call .. ".cmd"
+      end
       require("lspconfig")["pyright"].setup {
+        cmd = { python_lsp_call, "--stdio" },
         on_attach = on_attach,
         capabilities = capabilities,
         settings = {

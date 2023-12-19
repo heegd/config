@@ -12,8 +12,9 @@ end
 
 config.color_scheme = 'nord'
 config.font = wezterm.font('JetBrainsMono Nerd Font', { weight = 'DemiBold' })
-config.font_size = 13
+config.cell_width = 1
 config.line_height = 1.2
+config.freetype_load_target = "HorizontalLcd"
 
 config.keys = {
   {
@@ -68,7 +69,18 @@ config.window_padding = {
 
 config.window_close_confirmation = 'NeverPrompt'
 
-config.native_macos_fullscreen_mode = true
+if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
+  config.font_size = 10
+end
+
+if wezterm.target_triple == 'x86_64-apple-darwin' then
+  config.font_size = 13
+  config.native_macos_fullscreen_mode = true
+end
+
+if wezterm.target_triple == 'x86_64-unknown-linux-gnu' then
+  config.font_size = 10
+end
 
 -- and finally, return the configuration to wezterm
 return config
