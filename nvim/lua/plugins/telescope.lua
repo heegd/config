@@ -17,7 +17,6 @@ return {
 
       telescope.setup {
         defaults = {
-          path_display = { "smart" },
           file_ignore_patterns = { ".git/", "node_modules" },
           -- preview = false,
           mappings = {
@@ -26,6 +25,11 @@ return {
             },
           },
         },
+        pickers = {
+          find_files = {
+            path_display = "truncate"
+          }
+        }
       }
 
       telescope.load_extension("fzf")
