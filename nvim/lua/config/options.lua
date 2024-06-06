@@ -30,14 +30,17 @@ vim.opt.wrap = false
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- disable netrw for nvim-tree
-vim.g.loaded = 1
-vim.g.loaded_netrwPlugin = 1
-
 -- folding from treesitter
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldlevel = 99
+
+-- Highlight yanked Text
+vim.api.nvim_create_autocmd({ "TextYankPost" }, {
+  callback = function()
+    vim.highlight.on_yank { higroup = "Visual", timeout = 300 }
+  end,
+})
 
 -- diagnostics config
 local signs = {

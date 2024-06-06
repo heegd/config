@@ -17,7 +17,7 @@ require("lazy").setup("plugins", {
     patterns = { "read-cmd" },
     fallback = true
   },
-  install = { colorscheme = { "nord", "habamax" } },
+  install = { colorscheme = { "nord" } },
   rtp = {
     disabled_plugins = {
       "gzip",

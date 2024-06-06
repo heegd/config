@@ -7,7 +7,7 @@ return {
   end,
   opts = {
     plugins = {
-      registers = false
+      registers = true
     }
   }
 }
