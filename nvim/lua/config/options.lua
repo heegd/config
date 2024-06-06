@@ -1,5 +1,4 @@
 vim.opt.clipboard = vim.opt.clipboard + "unnamedplus"
-vim.opt.colorcolumn = "999999"
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 vim.opt.confirm = true
 vim.opt.cursorline = true
@@ -7,6 +6,7 @@ vim.opt.diffopt = vim.opt.diffopt + "algorithm:histogram" + "indent-heuristic" +
 vim.opt.expandtab = true
 vim.opt.grepprg = "rg --vimgrep --no-heading --smart-case"
 vim.opt.ignorecase = true
+vim.opt.inccommand = "split"
 vim.opt.iskeyword:append("-")
 vim.opt.list = true
 vim.opt.mouse = "a"
