@@ -6,7 +6,7 @@ return {
       local indent_blankline = require("ibl")
 
       indent_blankline.setup {
-        scope = { enabled = true, show_start = false },
+        scope = { enabled = true, show_start = false, show_end = false },
         exclude = {
           filetypes = { "help", "NvimTree" },
           buftypes = { "terminal", "nofile" }
