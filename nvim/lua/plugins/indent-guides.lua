@@ -8,7 +8,7 @@ return {
       indent_blankline.setup {
         scope = { enabled = true, show_start = false },
         exclude = {
-          filetypes = { "help", "packer", "NvimTree" },
+          filetypes = { "help", "NvimTree" },
           buftypes = { "terminal", "nofile" }
         }
       }
