@@ -1,7 +1,7 @@
 return {
   "stevearc/conform.nvim",
   lazy = true,
-  event = { "BufReadPre", "BufNewFile" }, -- to disable, comment this out
+  event = { "BufReadPre", "BufNewFile" },
   config = function()
     local conform = require("conform")
 
@@ -10,12 +10,13 @@ return {
         lua = { "stylua" },
         python = { "isort", "black" },
       },
-      -- format_on_save = {
-      --   lsp_fallback = true,
-      --   async = false,
-      --   timeout_ms = 1000,
-      -- },
+      format_on_save = {
+        timeout_ms = 1000,
+        lsp_fallback = true,
+      },
     })
+
+    vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
 
     vim.keymap.set({ "n", "v" }, "<leader>F", function()
       conform.format({

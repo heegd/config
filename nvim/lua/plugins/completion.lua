@@ -59,14 +59,8 @@ return {
       })
 
       local keymap = vim.keymap
-      keymap.set({ "i" }, "<C-S>e", function() luasnip.expand() end, { silent = true, desc = "Snippet expand" })
-      keymap.set({ "i", "s" }, "<C-S>n", function() luasnip.jump(1) end, { silent = true, desc = "Snippet next" })
-      keymap.set({ "i", "s" }, "<C-S>p", function() luasnip.jump(-1) end, { silent = true, desc = "Snippet previous" })
-      keymap.set({ "i", "s" }, "<C-S>c", function()
-        if luasnip.choice_active() then
-          luasnip.change_choice(1)
-        end
-      end, { silent = true, desc = "Snippet choice" })
+      keymap.set({ "i", "s" }, "<C-k>", function() luasnip.jump(1) end, { silent = true, desc = "Snippet next" })
+      keymap.set({ "i", "s" }, "<C-j>", function() luasnip.jump(-1) end, { silent = true, desc = "Snippet previous" })
     end
   }
 }
