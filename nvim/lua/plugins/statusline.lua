@@ -2,8 +2,8 @@ return {
   {
     "nvim-lualine/lualine.nvim",
     dependencies = {
-      { "arkav/lualine-lsp-progress" },
-      { "SmiteshP/nvim-navic" }
+      "arkav/lualine-lsp-progress",
+      "SmiteshP/nvim-navic"
     },
     config = function()
       local lualine = require("lualine")
