@@ -3,6 +3,7 @@ return {
   config = function()
     local lint = require("lint")
 
+    lint.linters.flake8.args = { "--max-line-length=88" }
     lint.linters_by_ft = {
       python = { "flake8" },
     }
@@ -15,6 +16,5 @@ return {
         lint.try_lint()
       end,
     })
-
   end,
 }
