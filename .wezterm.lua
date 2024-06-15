@@ -11,10 +11,7 @@ if wezterm.config_builder then
 end
 
 config.color_scheme = 'nord'
-config.font = wezterm.font('JetBrainsMono Nerd Font', { weight = 'DemiBold' })
-config.cell_width = 1
-config.line_height = 1.2
-config.freetype_load_target = "HorizontalLcd"
+config.font = wezterm.font('MonaspiceNe Nerd Font')
 
 config.keys = {
   {
@@ -66,6 +63,8 @@ config.window_padding = {
   top = 0,
   bottom = 0,
 }
+config.use_fancy_tab_bar = false
+config.hide_tab_bar_if_only_one_tab = true
 
 config.window_close_confirmation = 'NeverPrompt'
 
