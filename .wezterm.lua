@@ -11,7 +11,8 @@ if wezterm.config_builder then
 end
 
 config.color_scheme = 'nord'
-config.font = wezterm.font('MonaspiceNe Nerd Font')
+config.font = wezterm.font('JetBrainsMono Nerd Font')
+config.harfbuzz_features = { "calt", "clig", "liga" }
 
 config.keys = {
   {
