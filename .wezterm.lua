@@ -14,48 +14,48 @@ config.color_scheme = 'nord'
 config.font = wezterm.font('JetBrainsMono Nerd Font')
 config.harfbuzz_features = { "calt", "clig", "liga" }
 
-config.keys = {
-  {
-    key = 's',
-    mods = 'CTRL|SHIFT',
-    action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' },
-  },
-  {
-    key = 'v',
-    mods = 'CTRL|SHIFT',
-    action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
-  },
-  {
-    key = 'h',
-    mods = 'CTRL|SHIFT',
-    action = wezterm.action.ActivatePaneDirection("Left")
-  },
-  {
-    key = 'j',
-    mods = 'CTRL|SHIFT',
-    action = wezterm.action.ActivatePaneDirection("Down")
-  },
-  {
-    key = 'k',
-    mods = 'CTRL|SHIFT',
-    action = wezterm.action.ActivatePaneDirection("Up")
-  },
-  {
-    key = 'l',
-    mods = 'CTRL|SHIFT',
-    action = wezterm.action.ActivatePaneDirection("Right")
-  },
-  {
-    key = 'q',
-    mods = 'CTRL|SHIFT',
-    action = wezterm.action.CloseCurrentPane({ confirm = false })
-  },
-  {
-    key = '|',
-    mods = 'CTRL|SHIFT',
-    action = wezterm.action.TogglePaneZoomState
-  }
-}
+-- config.keys = {
+--   {
+--     key = 's',
+--     mods = 'CTRL|SHIFT',
+--     action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' },
+--   },
+--   {
+--     key = 'v',
+--     mods = 'CTRL|SHIFT',
+--     action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
+--   },
+--   {
+--     key = 'h',
+--     mods = 'CTRL|SHIFT',
+--     action = wezterm.action.ActivatePaneDirection("Left")
+--   },
+--   {
+--     key = 'j',
+--     mods = 'CTRL|SHIFT',
+--     action = wezterm.action.ActivatePaneDirection("Down")
+--   },
+--   {
+--     key = 'k',
+--     mods = 'CTRL|SHIFT',
+--     action = wezterm.action.ActivatePaneDirection("Up")
+--   },
+--   {
+--     key = 'l',
+--     mods = 'CTRL|SHIFT',
+--     action = wezterm.action.ActivatePaneDirection("Right")
+--   },
+--   {
+--     key = 'q',
+--     mods = 'CTRL|SHIFT',
+--     action = wezterm.action.CloseCurrentPane({ confirm = false })
+--   },
+--   {
+--     key = '|',
+--     mods = 'CTRL|SHIFT',
+--     action = wezterm.action.TogglePaneZoomState
+--   }
+-- }
 
 config.enable_scroll_bar = false
 config.window_padding = {
