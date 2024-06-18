@@ -25,7 +25,8 @@ return {
       },
       pickers = {
         find_files = {
-          path_display = "truncate"
+          path_display = "truncate",
+          hidden = true
         }
       }
     }
