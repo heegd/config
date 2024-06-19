@@ -16,7 +16,7 @@ config.mouse_wheel_scrolls_tabs = false
 config.warn_about_missing_glyphs = false
 config.window_close_confirmation = 'NeverPrompt'
 
-if wezterm.target_triple == 'x86_64-apple-darwin' then
+if wezterm.target_triple == 'aarch64-apple-darwin' then
   config.font_size = 13
   config.native_macos_fullscreen_mode = true
 end
