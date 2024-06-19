@@ -2,11 +2,14 @@ return {
   "neovim/nvim-lspconfig",
   dependencies = {
     "akinsho/flutter-tools.nvim",
+    "SmiteshP/nvim-navic"
   },
   config = function()
     local nvim_lsp = require("lspconfig")
+    local navic = require("nvim-navic")
 
     local on_attach = function(client, bufnr)
+      navic.attach(client, bufnr)
       vim.opt_local.omnifunc = "v:lua.vim.lsp.omnifunc"
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = 0 })
