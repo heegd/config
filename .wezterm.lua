@@ -57,6 +57,7 @@ config.harfbuzz_features = { "calt", "clig", "liga" }
 --   }
 -- }
 
+config.use_fancy_tab_bar = false
 config.enable_scroll_bar = false
 config.window_padding = {
   left = 0,
@@ -64,10 +65,9 @@ config.window_padding = {
   top = 0,
   bottom = 0,
 }
-config.use_fancy_tab_bar = false
-config.hide_tab_bar_if_only_one_tab = true
-
+config.window_decorations = "RESIZE"
 config.window_close_confirmation = 'NeverPrompt'
+
 
 if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
   config.font_size = 10
