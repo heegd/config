@@ -32,8 +32,7 @@ return {
           cmp.mapping.confirm {
             behavior = cmp.ConfirmBehavior.Insert,
             select = true,
-          },
-          { "i", "c" }
+          }
         ),
       },
       formatting = {
