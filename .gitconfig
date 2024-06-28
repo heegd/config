@@ -1,27 +1,27 @@
 [user]
-name = Dustin Heeg
+    name = Dustin Heeg
 
 [diff]
-tool = nvimdiff
+    tool = nvimdiff
 
 [difftool]
-prompt = true
+    prompt = true
 
 [difftool "nvimdiff"]
-cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+    cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 
 [merge]
-tool = "nvim"
+    tool = "nvim"
 
 [mergetool]
-keepBackup = false
-prompt = false
+    keepBackup = false
+    prompt = false
 
 [mergetool "nvim"]
-cmd = "nvim -d -c \"wincmd l\" -c \"norm ]c\" \"$LOCAL\" \"$MERGED\" \"$REMOTE\""
+    cmd = "nvim -d -c \"wincmd l\" -c \"norm ]c\" \"$LOCAL\" \"$MERGED\" \"$REMOTE\""
 
 [init]
-defaultBranch = main
+    defaultBranch = main
 
 [pull]
-rebase = false
+    rebase = false
