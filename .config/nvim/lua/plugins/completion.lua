@@ -3,12 +3,15 @@ return {
   lazy = false,
   priority = 100,
   dependencies = {
-    "hrsh7th/cmp-buffer",       -- Buffer completions
-    "hrsh7th/cmp-path",         -- Path completions
-    "L3MON4D3/LuaSnip",         -- Snippet engine
-    "saadparwaiz1/cmp_luasnip", -- Snippet completions
-    "onsails/lspkind.nvim",     -- vs-code like pictograms
-    "hrsh7th/cmp-nvim-lsp",     -- LSP completions
+    "hrsh7th/cmp-buffer", -- Buffer completions
+    "hrsh7th/cmp-path",   -- Path completions
+    {                     -- Snippet engine
+      "L3MON4D3/LuaSnip",
+      version = "v2.*",
+      build = "make install_jsregexp"
+    },
+    "onsails/lspkind.nvim", -- vs-code like pictograms
+    "hrsh7th/cmp-nvim-lsp", -- LSP completions
     "hrsh7th/cmp-nvim-lsp-signature-help"
   },
   config = function()
