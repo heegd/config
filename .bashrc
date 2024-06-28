@@ -6,4 +6,6 @@ LC_ALL="en_US.UTF-8"
 
 alias ls='ls --color=auto'
 
+export PATH="$PATH:$HOME/.gitcommands"
+
 eval "$(starship init bash)"
