@@ -22,7 +22,7 @@ if wezterm.target_triple == 'aarch64-apple-darwin' then
 end
 
 if wezterm.target_triple == 'x86_64-unknown-linux-gnu' then
-  config.font_size = 10
+  config.font_size = 11
 end
 
 return config
