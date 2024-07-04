@@ -45,9 +45,9 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
 -- diagnostics config
 local signs = {
   { name = "DiagnosticSignError", text = "" },
-  { name = "DiagnosticSignWarn",  text = "" },
-  { name = "DiagnosticSignHint",  text = "" },
-  { name = "DiagnosticSignInfo",  text = "" },
+  { name = "DiagnosticSignWarn", text = "" },
+  { name = "DiagnosticSignHint", text = "" },
+  { name = "DiagnosticSignInfo", text = "" },
 }
 
 for _, sign in ipairs(signs) do
@@ -55,9 +55,9 @@ for _, sign in ipairs(signs) do
 end
 
 local config = {
-  virtual_text = false,       -- disable virtual text
+  virtual_text = false, -- disable virtual text
   signs = {
-    active = signs,           -- show signs
+    active = signs,     -- show signs
   },
   update_in_insert = true,
   underline = false,

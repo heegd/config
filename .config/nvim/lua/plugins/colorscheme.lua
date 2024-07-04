@@ -14,7 +14,7 @@ return {
           highlights.DiffChange = { bg = utils.blend(colors.aurora.yellow, colors.polar_night.origin, alpha) }
           highlights.DiffDelete = {
             bg = utils.blend(colors.aurora.red, colors.polar_night.origin, alpha),
-            fg = utils.blend(colors.snow_storm.origin, colors.polar_night.origin, alpha)
+            fg = utils.blend(colors.aurora.red, colors.polar_night.origin, alpha)
           }
         end
       }
