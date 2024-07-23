@@ -12,10 +12,7 @@ return {
           highlights.DiffAdd = { bg = utils.blend(colors.aurora.green, colors.polar_night.origin, alpha) }
           highlights.DiffText = { bg = utils.blend(colors.aurora.yellow, colors.polar_night.origin, alpha + 0.10) }
           highlights.DiffChange = { bg = utils.blend(colors.aurora.yellow, colors.polar_night.origin, alpha) }
-          highlights.DiffDelete = {
-            bg = utils.blend(colors.aurora.red, colors.polar_night.origin, alpha),
-            fg = utils.blend(colors.aurora.red, colors.polar_night.origin, alpha)
-          }
+          highlights.DiffDelete = { bg = utils.blend(colors.aurora.red, colors.polar_night.origin, alpha) }
         end
       }
     )
