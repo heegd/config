@@ -5,7 +5,7 @@ vim.opt.cursorline = true
 vim.opt.diffopt = vim.opt.diffopt + "algorithm:histogram" + "indent-heuristic" + "linematch:60"
 vim.opt.expandtab = true
 vim.opt.fillchars = "diff: "
-vim.opt.grepprg = "rg --vimgrep --no-heading --smart-case"
+vim.opt.grepprg = "rg --vimgrep --no-heading --smart-case --hidden"
 vim.opt.ignorecase = true
 vim.opt.inccommand = "split"
 vim.opt.iskeyword:append("-")
