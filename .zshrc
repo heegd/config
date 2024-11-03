@@ -12,6 +12,15 @@ bindkey '^[[B' history-search-forward
 
 export PATH="$PATH:$HOME/.gitcommands"
 
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+autoload -Uz compinit
+compinit
+
+if [[ $(uname) == "Darwin" ]]; then
+    source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+else
+    source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
 
 eval "$(starship init zsh)
