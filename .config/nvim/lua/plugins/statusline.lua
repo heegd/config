@@ -2,16 +2,14 @@ return {
   "nvim-lualine/lualine.nvim",
   dependencies = {
     "arkav/lualine-lsp-progress",
-    "SmiteshP/nvim-navic"
   },
   config = function()
     local lualine = require("lualine")
-    local navic = require("nvim-navic")
 
     local filename = {
       "filename",
-      file_status = true,   -- displays file status (readonly status, modified status)
-      path = 1,             -- 0 = just filename, 1 = relative path, 2 = absolute path
+      file_status = true, -- displays file status (readonly status, modified status)
+      path = 1,           -- 0 = just filename, 1 = relative path, 2 = absolute path
     }
 
     local diagnostics = {
@@ -25,15 +23,6 @@ return {
     local location = {
       "location",
       padding = 0,
-    }
-
-    local context = {
-      function()
-        return navic.get_location()
-      end,
-      cond = function()
-        return navic.is_available()
-      end
     }
 
     local function working_directory()
@@ -79,7 +68,7 @@ return {
       winbar = {
         lualine_a = { location, "progress" },
         lualine_b = { "filetype", filename },
-        lualine_c = { context },
+        lualine_c = {},
         lualine_x = {},
         lualine_y = {},
         lualine_z = { diagnostics },
@@ -87,7 +76,7 @@ return {
       inactive_winbar = {
         lualine_a = { location, "progress" },
         lualine_b = { "filetype", filename },
-        lualine_c = { context },
+        lualine_c = {},
         lualine_x = {},
         lualine_y = {},
         lualine_z = { diagnostics },
