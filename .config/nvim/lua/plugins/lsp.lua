@@ -2,24 +2,23 @@ return {
   "neovim/nvim-lspconfig",
   dependencies = {
     "akinsho/flutter-tools.nvim",
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
   },
   config = function()
+    require("mason").setup(
+      {
+        pip = { upgrade_pip = true }
+      }
+    )
+
+    require("mason-lspconfig").setup(
+      {
+        automatic_installation = true,
+      }
+    )
+
     local nvim_lsp = require("lspconfig")
-
-    local on_attach = function(client, bufnr)
-      vim.opt_local.omnifunc = "v:lua.vim.lsp.omnifunc"
-
-      vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = 0 })
-      vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { buffer = 0 })
-      vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = 0 })
-      vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { buffer = 0 })
-      vim.keymap.set("n", "gr", vim.lsp.buf.references, { buffer = 0 })
-      vim.keymap.set("n", "gy", vim.lsp.buf.type_definition, { buffer = 0 })
-
-      vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, { buffer = 0 })
-      vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, { buffer = 0 })
-      vim.keymap.set("n", "<leader>ls", vim.lsp.buf.signature_help, { buffer = 0 })
-    end
 
     vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
       border = "rounded",
@@ -37,13 +36,11 @@ return {
     require("flutter-tools").setup {
       ui = { border = "rounded", },
       lsp = {
-        on_attach = on_attach,
         capabilities = capabilities
       }
     }
 
     require("lspconfig")["pyright"].setup {
-      on_attach = on_attach,
       capabilities = capabilities,
       settings = {
         python = {
@@ -58,36 +55,7 @@ return {
       }
     }
 
-    --[[ local util = require "lspconfig.util"
-      require("lspconfig")["pylsp"].setup{
-        on_attach = on_attach,
-        capabilities = capabilities,
-        settings = {
-          pylsp = {
-            plugins = {
-              pycodestyle = {
-                enabled = false
-              },
-              mccabe = {
-                enabled = false
-              },
-              pyflakes = {
-                enabled = false
-              },
-              flake8 = {
-                enabled = true
-              }
-            }
-          },
-        },
-        root_dir = function(fname)
-          return util.root_pattern(".git", "setup.py", "setup.cfg", "pyproject.toml", "requirements.txt")(fname) or
-            util.path.dirname(fname)
-          end,
-      } ]]
-
     nvim_lsp.jsonls.setup {
-      on_attach = on_attach,
       init_options = {
         provideFormatter = true,
       },
@@ -96,7 +64,6 @@ return {
     }
 
     nvim_lsp.lua_ls.setup {
-      on_attach = on_attach,
       capabilities = capabilities,
       settings = {
         Lua = {
@@ -122,17 +89,10 @@ return {
 
     nvim_lsp.html.setup {
       capabilities = capabilities,
-      on_attach = on_attach
     }
 
     nvim_lsp.marksman.setup {
       capabilities = capabilities,
-      on_attach = on_attach,
-    }
-
-    nvim_lsp.tsserver.setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
     }
   end
 }
