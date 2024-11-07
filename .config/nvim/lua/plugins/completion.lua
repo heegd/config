@@ -58,9 +58,5 @@ return {
         ghost_text = true
       },
     })
-
-    local keymap = vim.keymap
-    keymap.set({ "i", "s" }, "<C-k>", function() luasnip.jump(1) end, { silent = true, desc = "Snippet next" })
-    keymap.set({ "i", "s" }, "<C-j>", function() luasnip.jump(-1) end, { silent = true, desc = "Snippet previous" })
   end
 }
