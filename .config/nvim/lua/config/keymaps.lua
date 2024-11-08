@@ -30,3 +30,12 @@ keymap.set("n", "<leader>dq", vim.diagnostic.setqflist,
   { noremap = true, silent = true, desc = "Diagnostics set qflist" })
 keymap.set("n", "[d", vim.diagnostic.goto_prev, { noremap = true, silent = true, desc = "Diagnostics prev" })
 keymap.set("n", "]d", vim.diagnostic.goto_next, { noremap = true, silent = true, desc = "Diagnostics next" })
+
+-- Lsp
+keymap.set("n", "gr", "<NOP>")
+keymap.set("n", "grn", vim.lsp.buf.rename, { noremap = true, silent = true, desc = "LSP Rename" })
+keymap.set("n", "gra", vim.lsp.buf.code_action, { noremap = true, silent = true, desc = "LSP Rename" })
+keymap.set("n", "grr", vim.lsp.buf.references, { noremap = true, silent = true, desc = "LSP Rename" })
+keymap.set("n", "gri", vim.lsp.buf.implementation, { noremap = true, silent = true, desc = "LSP Rename" })
+keymap.set("n", "gO", vim.lsp.buf.document_symbol, { noremap = true, silent = true, desc = "LSP Rename" })
+keymap.set("i", "<C-S>", vim.lsp.buf.signature_help, { noremap = true, silent = true, desc = "LSP Rename" })
