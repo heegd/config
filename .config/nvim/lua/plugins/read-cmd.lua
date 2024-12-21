@@ -1,3 +1,3 @@
 return {
-  "heegd/read-cmd.nvim",
+    "heegd/read-cmd.nvim",
 }
