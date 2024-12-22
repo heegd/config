@@ -25,16 +25,16 @@ keymap.set("n", "[l", ":lprevious<cr>", { noremap = true, silent = true, desc = 
 -- Diagnostics
 keymap.set("n", "<leader>df", vim.diagnostic.open_float, { noremap = true, silent = true, desc = "Diagnostics float" })
 keymap.set(
-    "n",
-    "<leader>dl",
-    vim.diagnostic.setloclist,
-    { noremap = true, silent = true, desc = "Diagnostics set loclist" }
+  "n",
+  "<leader>dl",
+  vim.diagnostic.setloclist,
+  { noremap = true, silent = true, desc = "Diagnostics set loclist" }
 )
 keymap.set(
-    "n",
-    "<leader>dq",
-    vim.diagnostic.setqflist,
-    { noremap = true, silent = true, desc = "Diagnostics set qflist" }
+  "n",
+  "<leader>dq",
+  vim.diagnostic.setqflist,
+  { noremap = true, silent = true, desc = "Diagnostics set qflist" }
 )
 keymap.set("n", "[d", vim.diagnostic.goto_prev, { noremap = true, silent = true, desc = "Diagnostics prev" })
 keymap.set("n", "]d", vim.diagnostic.goto_next, { noremap = true, silent = true, desc = "Diagnostics next" })

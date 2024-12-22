@@ -38,35 +38,35 @@ vim.opt.foldlevel = 99
 
 -- Highlight yanked Text
 vim.api.nvim_create_autocmd({ "TextYankPost" }, {
-    callback = function()
-        vim.highlight.on_yank({ higroup = "Visual", timeout = 300 })
-    end,
+  callback = function()
+    vim.highlight.on_yank({ higroup = "Visual", timeout = 300 })
+  end,
 })
 
 -- diagnostics config
 local signs = {
-    { name = "DiagnosticSignError", text = "" },
-    { name = "DiagnosticSignWarn", text = "" },
-    { name = "DiagnosticSignHint", text = "" },
-    { name = "DiagnosticSignInfo", text = "" },
+  { name = "DiagnosticSignError", text = "" },
+  { name = "DiagnosticSignWarn", text = "" },
+  { name = "DiagnosticSignHint", text = "" },
+  { name = "DiagnosticSignInfo", text = "" },
 }
 
 for _, sign in ipairs(signs) do
-    vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
+  vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
 end
 
 local config = {
-    virtual_text = false, -- disable virtual text
-    signs = {
-        active = signs, -- show signs
-    },
-    update_in_insert = true,
-    underline = false,
-    severity_sort = true,
-    float = {
-        border = "rounded",
-        source = true,
-    },
+  virtual_text = false, -- disable virtual text
+  signs = {
+    active = signs, -- show signs
+  },
+  update_in_insert = true,
+  underline = false,
+  severity_sort = true,
+  float = {
+    border = "rounded",
+    source = true,
+  },
 }
 
 vim.diagnostic.config(config)

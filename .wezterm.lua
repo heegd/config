@@ -3,7 +3,7 @@ local act = wezterm.action
 local config = {}
 
 if wezterm.config_builder then
-    config = wezterm.config_builder()
+  config = wezterm.config_builder()
 end
 
 config.audible_bell = "Disabled"
@@ -19,20 +19,20 @@ config.warn_about_missing_glyphs = false
 config.window_close_confirmation = "NeverPrompt"
 
 config.keys = {
-    {
-        key = "v",
-        mods = "CTRL",
-        action = act.PasteFrom("Clipboard"),
-    },
+  {
+    key = "v",
+    mods = "CTRL",
+    action = act.PasteFrom("Clipboard"),
+  },
 }
 
 if wezterm.target_triple == "aarch64-apple-darwin" then
-    config.font_size = 14
-    config.native_macos_fullscreen_mode = true
+  config.font_size = 14
+  config.native_macos_fullscreen_mode = true
 end
 
 if wezterm.target_triple == "x86_64-unknown-linux-gnu" then
-    config.font_size = 13
+  config.font_size = 13
 end
 
 return config
