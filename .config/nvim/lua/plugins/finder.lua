@@ -13,7 +13,6 @@ return {
     })
 
     local keymap = vim.keymap
-
     keymap.set("n", "<leader>fb", "<cmd>FzfLua buffers<cr>", { desc = "Find buffers" })
     keymap.set("n", "<leader>fc", "<cmd>FzfLua commands<cr>", { desc = "Find commands" })
     keymap.set("n", "<leader>fd", "<cmd>FzfLua diagnostics_workspace<cr>", { desc = "Find diagnostics" })

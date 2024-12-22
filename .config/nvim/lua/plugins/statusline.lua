@@ -1,6 +1,7 @@
 return {
   "nvim-lualine/lualine.nvim",
   dependencies = {
+    "nvim-tree/nvim-web-devicons",
     "arkav/lualine-lsp-progress",
   },
   config = function()
@@ -8,7 +9,7 @@ return {
 
     local filename = {
       "filename",
-      file_status = true, -- displays file status (readonly status, modified status)
+      file_status = true, -- (readonly status, modified status)
       path = 1, -- 0 = just filename, 1 = relative path, 2 = absolute path
     }
 
@@ -65,23 +66,19 @@ return {
       },
       winbar = {
         lualine_a = { location, "progress" },
-        lualine_b = { "filetype", filename },
-        lualine_c = {},
+        lualine_b = { "filetype" },
+        lualine_c = { filename },
         lualine_x = {},
         lualine_y = {},
         lualine_z = { diagnostics },
       },
       inactive_winbar = {
         lualine_a = { location, "progress" },
-        lualine_b = { "filetype", filename },
-        lualine_c = {},
+        lualine_b = { "filetype" },
+        lualine_c = { filename },
         lualine_x = {},
         lualine_y = {},
         lualine_z = { diagnostics },
-      },
-      extensions = {
-        "nvim-tree",
-        "toggleterm",
       },
     })
   end,

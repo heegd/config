@@ -6,10 +6,6 @@ return {
 
     indent_blankline.setup({
       scope = { enabled = true, show_start = false, show_end = false },
-      exclude = {
-        filetypes = { "help", "NvimTree", "markdown" },
-        buftypes = { "terminal", "nofile" },
-      },
     })
   end,
 }
