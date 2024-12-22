@@ -2,6 +2,7 @@ return {
   "neovim/nvim-lspconfig",
   dependencies = {
     "akinsho/flutter-tools.nvim",
+    "nvim-lua/plenary.nvim",
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
   },
