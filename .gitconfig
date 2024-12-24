@@ -1,5 +1,6 @@
 [user]
-    name = Dustin Heeg
+    name = 
+    email = 
 
 [diff]
     tool = nvimdiff
