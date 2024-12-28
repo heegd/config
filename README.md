@@ -2,7 +2,7 @@
 
 - Bash or Zsh
 - [Monaspice Nerd Font](https://www.nerdfonts.com/)
-- [Wezterm](https://wezfurlong.org/wezterm/index.html)
+- [Wezterm](https://wezfurlong.org/wezterm/index.html) or [Ghostty](https://ghostty.org/)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [fzf](https://github.com/junegunn/fzf)
 - [tmux](https://github.com/tmux/tmux/wiki)
@@ -23,6 +23,7 @@
     .zshrc -> $HOME/.zshrc
     .config/starship.toml -> $HOME/.config/starship.toml
     .config/nvim -> $HOME/.config/nvim
+    .config/ghostty/config -> $HOME/.config/ghostty/config
     ```
 
 ## Additional Setup
