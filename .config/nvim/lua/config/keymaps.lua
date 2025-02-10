@@ -1,5 +1,8 @@
 local keymap = vim.keymap
 
+-- https://www.reddit.com/r/neovim/comments/1h6k12y/override_or_delete_original_filetypevim_mappings/
+vim.g.no_python_maps = 1 -- Disable built-in python mappings
+
 -- Common
 keymap.set("n", "<leader>q", ":q<cr>", { desc = "Quit" })
 keymap.set("n", "<leader>Q", ":qa<cr>", { desc = "Quit all" })
