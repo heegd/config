@@ -37,16 +37,21 @@ return {
       },
     })
 
+    require("lspconfig")["ruff"].setup({
+      capabilities = capabilities,
+    })
+
     require("lspconfig")["pyright"].setup({
       capabilities = capabilities,
       settings = {
+        pyright = {
+          -- Use Ruff for organizing imports
+          disableOrganizeImports = true,
+        },
         python = {
           analysis = {
-            autoImportCompletions = true,
-            autoSearchPaths = true,
-            diagnosticMode = "workspace",
-            typeCheckingMode = "off",
-            useLibraryCodeForTypes = true,
+            -- Ignore all files for analysis to exclusively use Ruff for linting
+            ignore = { "*" },
           },
         },
       },
