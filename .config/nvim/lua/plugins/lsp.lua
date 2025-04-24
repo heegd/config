@@ -91,5 +91,9 @@ return {
     nvim_lsp.marksman.setup({
       capabilities = capabilities,
     })
+
+    nvim_lsp.vtsls.setup({
+      capabilities = capabilities,
+    })
   end,
 }

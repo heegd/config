@@ -3,9 +3,8 @@ return {
   config = function()
     local lint = require("lint")
 
-    lint.linters.flake8.args = { "--max-line-length=88" }
     lint.linters_by_ft = {
-      python = { "flake8" },
+      python = { "ruff" },
     }
 
     local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
