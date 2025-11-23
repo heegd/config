@@ -26,6 +26,7 @@ vim.opt.termguicolors = true
 vim.opt.timeout = true
 vim.opt.timeoutlen = 500
 vim.opt.wrap = false
+vim.o.winborder = "rounded"
 
 -- Set the leader key
 vim.g.mapleader = " "
@@ -43,22 +44,16 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
   end,
 })
 
--- diagnostics config
-local signs = {
-  { name = "DiagnosticSignError", text = "" },
-  { name = "DiagnosticSignWarn", text = "" },
-  { name = "DiagnosticSignHint", text = "" },
-  { name = "DiagnosticSignInfo", text = "" },
-}
-
-for _, sign in ipairs(signs) do
-  vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
-end
-
+-- Diagnostics
 local config = {
   virtual_text = false,
   signs = {
-    active = signs,
+    text = {
+      [vim.diagnostic.severity.ERROR] = "",
+      [vim.diagnostic.severity.WARN] = "",
+      [vim.diagnostic.severity.HINT] = "",
+      [vim.diagnostic.severity.INFO] = "",
+    },
   },
   update_in_insert = true,
   underline = false,

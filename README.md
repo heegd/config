@@ -7,7 +7,7 @@
 - [fzf](https://github.com/junegunn/fzf)
 - [tmux](https://github.com/tmux/tmux/wiki)
 - [Starship Prompt](https://starship.rs/)
-- [Neovim](https://neovim.io/)
+- [Neovim](https://neovim.io/) Version 0.11
 
 ## Setup
 

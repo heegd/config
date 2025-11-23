@@ -39,8 +39,12 @@ keymap.set(
   vim.diagnostic.setqflist,
   { noremap = true, silent = true, desc = "Diagnostics set qflist" }
 )
-keymap.set("n", "[d", vim.diagnostic.goto_prev, { noremap = true, silent = true, desc = "Diagnostics prev" })
-keymap.set("n", "]d", vim.diagnostic.goto_next, { noremap = true, silent = true, desc = "Diagnostics next" })
+keymap.set("n", "[d", function()
+  vim.diagnostic.jump({ count = 1, float = true })
+end, { noremap = true, silent = true, desc = "Diagnostics prev" })
+keymap.set("n", "]d", function()
+  vim.diagnostic.jump({ count = -1, float = true })
+end, { noremap = true, silent = true, desc = "Diagnostics next" })
 
 -- Lsp
 keymap.set("n", "gr", "<NOP>")
