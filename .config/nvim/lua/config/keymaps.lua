@@ -40,10 +40,10 @@ keymap.set(
   { noremap = true, silent = true, desc = "Diagnostics set qflist" }
 )
 keymap.set("n", "[d", function()
-  vim.diagnostic.jump({ count = 1, float = true })
+  vim.diagnostic.jump({ count = -1, float = true })
 end, { noremap = true, silent = true, desc = "Diagnostics prev" })
 keymap.set("n", "]d", function()
-  vim.diagnostic.jump({ count = -1, float = true })
+  vim.diagnostic.jump({ count = 1, float = true })
 end, { noremap = true, silent = true, desc = "Diagnostics next" })
 
 -- Lsp
