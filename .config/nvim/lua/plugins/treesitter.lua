@@ -8,16 +8,17 @@ return {
     local ts = require("nvim-treesitter")
     local langs = {
       "c",
+      "dart",
+      "html",
       "lua",
-      "vim",
-      "vimdoc",
-      "query",
-      "sql",
-      "python",
       "markdown",
       "markdown_inline",
-      "html",
-      "dart",
+      "python",
+      "query",
+      "sql",
+      "typescript",
+      "vim",
+      "vimdoc",
       "yaml",
     }
     ts.install(langs)
