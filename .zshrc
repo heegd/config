@@ -7,12 +7,16 @@ setopt share_history
 setopt hist_expire_dups_first
 setopt hist_ignore_dups
 setopt hist_verify
+setopt hist_ignore_space
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
 export PATH="$PATH:$HOME/.gitcommands"
 
 autoload -Uz compinit
+autoload -z edit-command-line
+zle -N edit-command-line
+bindkey '^X^E' edit-command-line
 compinit
 
 if [[ $(uname) == "Darwin" ]]; then
@@ -22,5 +26,7 @@ else
     source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
+
+export EDITOR=nvim
 
 eval "$(starship init zsh)
