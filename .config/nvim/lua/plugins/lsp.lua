@@ -8,8 +8,6 @@ return {
       "marksman",
       "pyright",
       "ruff",
-      "ruff",
-      "stylua",
       "ts_ls",
     },
   },
