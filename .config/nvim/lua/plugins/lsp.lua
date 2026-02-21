@@ -10,7 +10,7 @@ return {
       "ruff",
       "ruff",
       "stylua",
-      "vtsls",
+      "ts_ls",
     },
   },
   dependencies = {
