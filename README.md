@@ -57,3 +57,15 @@ They will be activated in `.zshrc` or `.bashrc`.
     - `html-lsp`
     - `lua-language-server`
     - `stylua`
+
+## Extending Configuration
+
+To add machine-specific configurations without modifying the main tracked files, you can create the following local files:
+
+- `.bashrc.local` (sourced by `.bashrc`)
+- `.zshrc.local` (sourced by `.zshrc`)
+
+These files are the perfect place for:
+- Machine-specific paths
+- Personal aliases
+- Site-specific environment variables

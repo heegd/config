@@ -29,4 +29,8 @@ fi
 
 export EDITOR=nvim
 
-eval "$(starship init zsh)
+eval "$(starship init zsh)"
+
+if [[ -f ~/.zshrc.local ]]; then
+    source ~/.zshrc.local
+fi

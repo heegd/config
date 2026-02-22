@@ -9,3 +9,7 @@ alias ls='ls --color=auto'
 export PATH="$PATH:$HOME/.gitcommands"
 
 eval "$(starship init bash)"
+
+if [ -f ~/.bashrc.local ]; then
+    . ~/.bashrc.local
+fi
