@@ -8,6 +8,7 @@ setopt hist_expire_dups_first
 setopt hist_ignore_dups
 setopt hist_verify
 setopt hist_ignore_space
+bindkey -v
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
@@ -26,6 +27,7 @@ else
     source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
+source <(fzf --zsh)
 
 export EDITOR=nvim
 
